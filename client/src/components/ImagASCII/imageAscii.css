@@ -23,7 +23,7 @@ h2{
    border: 2px dashed #ccc;
    margin-bottom: 1.5rem;
 }
-input{
+.inputFile{
    display: none;
 }
 button{
@@ -54,6 +54,8 @@ img{
    height: 500px;
    object-fit: cover;
    animation: img 0.8s 1;
+   box-shadow: -4px 5px 5px  rgba(192, 192, 192, 0.288);
+
 }
 @keyframes img {
    0%{
@@ -64,6 +66,32 @@ img{
       opacity: 1;
       transform: scaleY(1);
    }
+}
+.containerSetting{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+.inputNumber{
+   gap: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.number{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.number button{
+   padding: 1rem;
+
+}
+.number input{
+   padding-left: 0.5rem;
+   border: none;
+   width: 5rem;
+   height: 2.5rem;
 }
 .resultImg{
    display: flex;
