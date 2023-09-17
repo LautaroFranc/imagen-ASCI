@@ -1,4 +1,3 @@
-"strict-transport-security"
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
@@ -50,6 +49,7 @@ app.post('/image-to-ascii', upload.single('image'), async (req, res) => {
         res.status(500).send('Error al procesar la imagen. :' + error.message);
     }
 });
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
