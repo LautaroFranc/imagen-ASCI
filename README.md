@@ -2,7 +2,6 @@
     <h1>Proyecto ASCII Art Converter 🎨🔤</h1>
     <p>Convertidor de imágenes a arte ASCII, con una interfaz de cliente construida en React y una API en Express.</p>
     <img src="./client/public/demo.png" alt="Demo de ASCII Art Converter">
-    <p><i>(Reemplaza con la URL de una captura de pantalla o demo del proyecto)</i></p>
     <h2>🚀 Características</h2>
     <ul>
         <li><strong>Interfaz intuitiva:</strong> Convierte fácilmente tus imágenes favoritas en arte ASCII con tan solo unos clics.</li>
