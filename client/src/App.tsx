@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageToAscii from './components/ImagASCII/index'; 
 import "./App.css"
 function App() {
