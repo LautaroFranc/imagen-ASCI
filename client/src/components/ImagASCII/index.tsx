@@ -3,7 +3,7 @@ import "./imageAscii.css"
 import useFetch from '../../hooks/useFetch';
 
 function ImageToAscii() {
-    const { asciiResult, setData, setUrl, clearData } = useFetch()
+    const { asciiResult, setData, setUrl, clearData, loading } = useFetch()
     const [file, setFile] = useState<HTMLFormElement | null>(null);
     const [width, setWidth] = useState(120);
     const [img, setImg] = useState('');
@@ -15,7 +15,7 @@ function ImageToAscii() {
         const form = event.currentTarget;
         const formData = new FormData(form);
         setFile(form)
-        setUrl("http://localhost:3000/image-to-ascii")
+        setUrl("https://imagen-ascii-api-git-main-lautarofranc.vercel.app/image-to-ascii")
         setData(formData)
     };
 
@@ -35,7 +35,7 @@ function ImageToAscii() {
     const handleMideshow = () => {
         if (file) {
             const formData = new FormData(file);
-            setUrl("http://localhost:3000/image-to-ascii?width=" + width )
+            setUrl("https://imagen-ascii-api-git-main-lautarofranc.vercel.app/image-to-ascii?width=" + width)
             setData(formData)
         }
     }
@@ -44,7 +44,7 @@ function ImageToAscii() {
     const handleNumberW = (number: React.ChangeEvent<HTMLInputElement>) => {
         setWidth(+number.target.value)
     }
-   
+
     const clearImg = () => {
         setImg('')
         clearData()
@@ -66,7 +66,7 @@ function ImageToAscii() {
             <div className='resultImg'>
                 <div className='containerSetting'>
                     {asciiResult && <div className='inputNumber'>
-                    <label>Tamaño:</label>
+                        <label>Tamaño:</label>
 
                         <div className='number' >
                             <input type='number' value={width} onChange={handleNumberW} />
@@ -78,7 +78,9 @@ function ImageToAscii() {
                 {asciiResult && <h3>Resultado:</h3>}
                 <pre className={`${asciiResult ? "showImg" : ""}`}>{asciiResult}</pre>
             </div>
-
+            {loading && <span className='loading'>
+                <div />
+            </span>}
         </div>
     );
 }

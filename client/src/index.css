@@ -3,6 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-size: 100%;
+
+}
+@media  only screen and (min-width: 768px) and (max-width: 979px) {
+  html{
+    font-size: 50%;
+  
+  }
+}
+@media  only screen and (max-width: 767px) {
+  html{
+    font-size: 50%;
+  
+  }
+}
+@media  only screen and (min-width: 1080px) {
+  html{
+    font-size: 90%;
+  
+  }
+}
 
 body{
   background-color: #f1f1f1;

@@ -36,7 +36,7 @@ app.post('/image-to-ascii', upload.single('image'), async (req, res) => {
         for (let y = 0; y < image.bitmap.height; y++) {
             for (let x = 0; x < image.bitmap.width; x++) {
                 const pixelColor = Jimp.intToRGBA(image.getPixelColor(x, y));
-                const avgColor = (pixelColor.r + pixelColor.g + pixelColor.b) / 4;
+                const avgColor = (pixelColor.r + pixelColor.g + pixelColor.b) / 3;
                 const asciiIndex = Math.floor(((255 - avgColor) / 255) * (asciiChars.length - 1));
                 asciiImage += asciiChars[asciiIndex];
             }
